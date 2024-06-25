@@ -17,8 +17,8 @@ const DocsCallout = (props) => {
             plural ? 'have' : 'has'
           } been created as a native React.js version
       of Bootstrap ${name}. ${name} ${plural ? 'are' : 'is'} delivered with some new features,
-      variants, and unique design that matches CoreUI Design System requirements.`}
-      <br />
+     variants, and unique design that matches CoreUI Design System requirements.`}
+     <br />
       <br />
       For more information please visit our official{' '}
       <CLink href={_href} target="_blank">
@@ -26,11 +26,11 @@ const DocsCallout = (props) => {
       </CLink>
       .
     </CCallout>
-  )
+ )
 }
 
 DocsCallout.propTypes = {
-  content: PropTypes.string,
+ content: PropTypes.string,
   href: PropTypes.string,
   name: PropTypes.string,
 }

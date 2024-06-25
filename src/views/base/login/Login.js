@@ -166,51 +166,56 @@
 // }
 
 // export default Accordion
-import { CCard } from '@coreui/react';
-import { TextField } from '@mui/material';
-import React from 'react';
+
+
+
+
+
+
+//import { CCard } from '@coreui/react';
+//import { TextField } from '@mui/material';
+//import React from 'react';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 //import 'assets/css/icons.min.css';
 //import 'assets/css/app.min.css';
 
-const Login = () => {
-  return (
-    <>
-      <style>{`
-        .content-wrapper {
-          border: 1px solid  #523885 ; 
-          border-radius: 8px; /* Optional: for rounded corners */
-          padding: 20px;
-          background-color: #fff; /* Optional: for background color */
-        }
-      `}</style>
-        <CCard className="mb-4">
-      <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 p-0">
-        <div className="row g-0 justify-content-center align-items-center w-100">
-          <div className="col-lg-4 d-flex justify-content-center align-items-center">
-            <div className="content-wrapper w-100 p-4">
-              <div className="text-center">
-                <a href="index.html" className="authentication-logo">
-                  <img
-                    src="assets/images/logo-dark.png"
+//const Login = () => {
+ // return (
+ //   <>
+ //     <style>{`
+  //      .content-wrapper {
+  //        border-radius: 8px; /* Optional: for rounded corners */
+  //        padding: 20px;
+  //        background-color: #fff; /* Optional: for background color */
+  //      }
+  //    `}</style>
+  //      <CCard className="mb-4">
+  //    <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 p-0">
+  //      <div className="row g-0 justify-content-center align-items-center w-100">
+  //        <div className="col-lg-4 d-flex justify-content-center align-items-center">
+  //          <div className="content-wrapper w-100 p-4">
+  //            <div className="text-center">
+  //              <a href="index.html" className="authentication-logo">
+  //                <img
+  //                  src="assets/images/logo-dark.png"
                     // alt="Logo Dark"
-                    height={20}
-                    className="auth-logo logo-dark mx-auto"
-                  />
-                  <img
-                    src="assets/images/logo-light.png"
+  //                  height={20}
+   //                 className="auth-logo logo-dark mx-auto"
+   //               />
+   //               <img
+   //                 src="assets/images/logo-light.png"
                     // alt="Logo Light"
-                    height={20}
-                    className="auth-logo logo-light mx-auto"
-                  />
-                </a>
-                <h4 className="font-size-18 mt-4">Welcome Back!</h4>
-                <p className="text-muted">Sign in to continue to Nazox.</p>
-              </div>
-              <div className="p-2 mt-5">
-                <form action="index.html">
-                  <div className="mb-3 auth-form-group-custom">
-                    <i className="ri-user-2-line auti-custom-input-icon"></i>
+   //                 height={20}
+   //                 className="auth-logo logo-light mx-auto"
+   //               />
+   //             </a>
+   //             <h4 className="font-size-18 mt-4">Welcome Back!</h4>
+   //             <p className="text-muted">Sign in to continue to Nazox.</p>
+    //          </div>
+    //          <div className="p-2 mt-5">
+    //            <form action="index.html">
+     //             <div className="mb-3 auth-form-group-custom">
+     //               <i className="ri-user-2-line auti-custom-input-icon"></i>
                     {/* <label htmlFor="username" className="fw-semibold">
                       Username
                     </label>
@@ -220,31 +225,31 @@ const Login = () => {
                       id="username"
                       placeholder="Enter username"
                     /> */}
-                    <TextField
-                id="username"
-                label="Username"
-                variant="outlined"
-                size="small"
-                fullWidth
+   //                 <TextField
+   //             id="username"
+    //            label="Username"
+    //            variant="outlined"
+    //            size="small"
+     //           fullWidth
                 // value={labNo}
                 // onChange={(e) => setLabNo(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '18px' } }}
-                 style={{ marginTop: '10px' }}
-              />
-                  </div>
-                  <div className="mb-3 auth-form-group-custom">
-                    <i className="ri-lock-2-line auti-custom-input-icon"></i>
-                    <TextField
-                id="password"
-                label="Password"
-                variant="outlined"
-                size="small"
-                fullWidth
+   //             InputLabelProps={{ style: { fontSize: '18px' } }}
+   //              style={{ marginTop: '10px' }}
+    //          />
+    //              </div>
+     //             <div className="mb-3 auth-form-group-custom">
+     //               <i className="ri-lock-2-line auti-custom-input-icon"></i>
+      //              <TextField
+       //         id="password"
+       //         label="Password"
+        //        variant="outlined"
+        //        size="small"
+        //        fullWidth
                 // value={labNo}
                 // onChange={(e) => setLabNo(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '18px' } }}
-                 style={{ marginTop: '10px' }}
-              />
+       //         InputLabelProps={{ style: { fontSize: '18px' } }}
+       //          style={{ marginTop: '10px' }}
+       //       />
                     {/* <label htmlFor="userpassword">Password</label>
                     <input
                       type="password"
@@ -252,7 +257,7 @@ const Login = () => {
                       id="userpassword"
                       placeholder="Enter password"
                     /> */}
-                  </div>
+        //          </div>
                   {/* <div className="form-check">
                     <input
                       type="checkbox"
@@ -266,21 +271,21 @@ const Login = () => {
                       Remember me
                     </label>
                   </div> */}
-                  <div className="mt-4 text-center">
-                    <button
-                      className="btn btn-primary w-md waves-effect waves-light"
-                      type="submit"
-                    >
-                      Log In
-                    </button>
-                  </div>
-                  <div className="mt-4 text-center">
-                    <a href="auth-recoverpw.html" className="text-muted">
-                      <i className="mdi mdi-lock me-1"></i> Forgot your password?
-                    </a>
-                  </div>
-                </form>
-              </div>
+         //         <div className="mt-4 text-center">
+         //           <button
+         //             className="btn btn-primary w-md waves-effect waves-light"
+         //             type="submit"
+         //           >
+         //             Log In
+          //          </button>
+          //        </div>
+           //       <div className="mt-4 text-center">
+           //         <a href="auth-recoverpw.html" className="text-muted">
+           //           <i className="mdi mdi-lock me-1"></i> Forgot your password?
+           //         </a>
+           //       </div>
+           //     </form>
+           //   </div>
               {/* <div className="mt-5 text-center">
                 <p>
                   Don't have an account?{" "}
@@ -296,21 +301,21 @@ const Login = () => {
                   <i className="mdi mdi-heart text-danger"></i> by Themesdesign
                 </p>
               </div> */}
-            </div>
-          </div>
+        //    </div>
+       //   </div>
           {/* <div className="col-lg-8 d-none d-lg-block">
             <div className="authentication-bg">
               <div className="bg-overlay"></div>
             </div>
           </div> */}
-        </div>
-      </div>
-      </CCard>
-    </>
-  );
-};
+     //   </div>
+    // </div>
+   //   </CCard>
+   // </>
+ // );
+//};
 
-export default Login;
+//export default Login;
 
 
 

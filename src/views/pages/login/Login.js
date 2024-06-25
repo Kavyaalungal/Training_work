@@ -7,25 +7,26 @@ import { useNavigate } from 'react-router-dom';
 import { login } from '../../../actions/authActions';
 import iconLogo from '../../../assets/images/icon-logo.png';
 
+
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); 
     // Perform your login logic here (e.g., API call)
     dispatch(login());
-    navigate('/'); // Navigate to the home page (DefaultLayout) after login
+    navigate('/');
   };
 
   return (
     <>
       <style>{`
         .content-wrapper {
-          border: 1px solid  #78dbe7 ; 
+          border: 2px solid #523885; 
           border-radius: 8px; /* Optional: for rounded corners */
           padding: 20px;
-          background-color: #fff; /* Optional: for background color */
+          background-color: #fff; 
         }
       `}</style>
       <CCard className="mb-4">
@@ -74,7 +75,7 @@ const Login = () => {
                     </div>
                     <div className="mt-4 text-center">
                       <a href="auth-recoverpw.html" className="text-muted">
-                        <i className="mdi mdi-lock me-1"></i> Forgot your password?
+                        {/* <i className="mdi mdi-lock me-1"></i> Forgot your password? */}
                       </a>
                     </div>
                   </form>
@@ -89,30 +90,4 @@ const Login = () => {
 };
 
 export default Login;
-
-// src/views/pages/login/Login.js
-// import React from 'react'
-// import { useDispatch } from 'react-redux'
-// import { useNavigate } from 'react-router-dom'
-// import { login } from '../../../actions/authActions'
-
-// const Login = () => {
-//   const dispatch = useDispatch()
-//   const navigate = useNavigate()
-
-//   const handleLogin = () => {
-//     // Perform your login logic here (e.g., API call)
-//     dispatch(login())
-//     navigate('/') // Navigate to the home page (DefaultLayout) after login
-//   }
-
-//   return (
-//     <div>
-//       <h2>Login Page</h2>
-//       <button onClick={handleLogin}>Login</button>
-//     </div>
-//   )
-// }
-
-// export default Login
 

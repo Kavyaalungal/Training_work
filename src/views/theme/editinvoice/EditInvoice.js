@@ -723,7 +723,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={labNo}
                 onChange={(e) => setLabNo(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
                 style={{ marginBottom: '10px' }}
               />
             </Grid>
@@ -776,7 +776,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={labNo}
                 onChange={(e) => setLabNo(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
                  style={{ marginTop: '10px' }}
               />
             </Grid>
@@ -797,9 +797,9 @@ const handleNewButtonClick = () => {
             <Grid item xs={12} sm={2}>
   <FormControl fullWidth variant="outlined" sx={{ width: '100%' , height: '100%' }}  >
     <InputLabel  sx={{
-    fontSize: '0.9rem',
+    fontSize: '1rem',
     color: 'rgba(0, 0, 0, 0.6)', 
-    marginTop: '-3px'
+    marginTop: '-1px'
   }}>Prefix</InputLabel>
     <Select
       name="prefix"
@@ -824,7 +824,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={name}
                   onChange={(e) => setName(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid>
         
@@ -853,7 +853,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={day}
                 onChange={(e) => setDay(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid>
             <Grid item xs={3}>
@@ -865,7 +865,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={month}
                 onChange={(e) => setMonth(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid>
             <Grid item xs={3}>
@@ -877,12 +877,17 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={year}
                 onChange={(e) => setYear(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid> 
             <Grid item xs={12} sm={3}>
                   <FormControl variant="outlined" size="small" fullWidth>
-                    <InputLabel id="genderLabel">Gender</InputLabel>
+                    <InputLabel id="genderLabel"
+                    sx={{
+                      fontSize: '1rem',
+                      color: 'rgba(0, 0, 0, 0.6)', 
+                      marginTop: '-1px'
+                    }}>Gender</InputLabel>
                     <Select
                       labelId="genderLabel"
                       id="gender"
@@ -911,7 +916,7 @@ const handleNewButtonClick = () => {
                   setDob(e.target.value);
                   calculateAge(e.target.value);
                 }}
-                InputLabelProps={{ shrink: true, style: { fontSize: '14px' } }}
+                InputLabelProps={{ shrink: true, style: { fontSize: '16px' } }}
               />
             </Grid>
 
@@ -928,7 +933,7 @@ const handleNewButtonClick = () => {
                     setPhone1(e.target.value)
                     setIsPhone1Valid(true)
                   }}
-                  InputLabelProps={{ style: { fontSize: '14px' } }}
+                  InputLabelProps={{ style: { fontSize: '16px' } }}
                    error={!isPhone1Valid}
                    helperText={!isPhone1Valid ? "Invalid Phone number" : ""}
                 />
@@ -945,7 +950,7 @@ const handleNewButtonClick = () => {
                   setPhone2(e.target.value)
                   setIsPhone2Valid(true)
                 }}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
                  error={!isPhone2Valid} 
                  helperText={!isPhone2Valid ? "Invalid Phone number" : ""}
               />
@@ -962,7 +967,7 @@ const handleNewButtonClick = () => {
                   setEmail(e.target.value);
                   setIsEmailValid(true);
                 }}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
                  error={!isEmailValid}
                  helperText={!isEmailValid ? "Invalid email address" : ""}
               />
@@ -976,7 +981,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={nationality}
                 onChange={(e) => setNationality(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -988,7 +993,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                  value={address}
                 onChange={(e) => setAddress(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -1008,7 +1013,7 @@ const handleNewButtonClick = () => {
             fullWidth
             error={!!errorRefBy}
             helperText={errorRefBy}
-            InputLabelProps={{ style: { fontSize: '14px' } }}
+            InputLabelProps={{ style: { fontSize: '16px' } }}
           />
         )}
       />
@@ -1022,7 +1027,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={outDr}
                 onChange={(e) => setOutDr(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -1034,7 +1039,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={passport}
                 onChange={(e) => setPassport(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -1046,7 +1051,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={srfNo}
                 onChange={(e) => setSrfNo(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -1066,7 +1071,7 @@ const handleNewButtonClick = () => {
         fullWidth
         error={!!errorBranch}
         helperText={errorBranch}
-        InputLabelProps={{ style: { fontSize: '14px' } }}
+        InputLabelProps={{ style: { fontSize: '16px' } }}
       />
     )}
   />
@@ -1081,7 +1086,7 @@ const handleNewButtonClick = () => {
           value={aadhar}
           onChange={handleAadharChange}
           onBlur={handleAadharBlur}
-          InputLabelProps={{ style: { fontSize: '14px' } }}
+          InputLabelProps={{ style: { fontSize: '16px' } }}
           error={!!errorAadhar}
           helperText={errorAadhar}
         />
@@ -1095,7 +1100,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={wardNo}
                 onChange={(e) => setWardNo(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -1107,7 +1112,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={ipOpNo}
                 onChange={(e) => setIpOpNo(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -1127,7 +1132,7 @@ const handleNewButtonClick = () => {
         fullWidth
         error={!!errorCollMode}
         helperText={errorCollMode}
-        InputLabelProps={{ style: { fontSize: '14px' } }}
+        InputLabelProps={{ style: { fontSize: '16px' } }}
       />
     )}
   />
@@ -1150,7 +1155,7 @@ const handleNewButtonClick = () => {
               fullWidth
               error={!!errorCollBy}
               helperText={errorCollBy}
-              InputLabelProps={{ style: { fontSize: '14px' } }}
+              InputLabelProps={{ style: { fontSize: '16px' } }}
             />
           )}
         />
@@ -1165,7 +1170,7 @@ const handleNewButtonClick = () => {
     fullWidth
     value={smplDate}
     onChange={handleSmplDateChange}
-    InputLabelProps={{ shrink: true, style: { fontSize: '14px' } }}
+    InputLabelProps={{ shrink: true, style: { fontSize: '16px' } }}
   />
 </Grid>
 <Grid item xs={12} sm={6}>
@@ -1178,7 +1183,7 @@ const handleNewButtonClick = () => {
     fullWidth
     value={repTime}
     onChange={handleRepTimeChange}
-    InputLabelProps={{ shrink: true, style: { fontSize: '14px' } }}
+    InputLabelProps={{ shrink: true, style: { fontSize: '16px' } }}
   />
 </Grid>
         
@@ -1221,7 +1226,7 @@ const handleNewButtonClick = () => {
                 fullWidth
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
-                InputLabelProps={{ style: { fontSize: '14px' } }}
+                InputLabelProps={{ style: { fontSize: '16px' } }}
               />
             </Grid>
             </>
