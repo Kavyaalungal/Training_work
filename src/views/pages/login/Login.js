@@ -65,6 +65,7 @@ const Login = () => {
                         label="Password"
                         variant="outlined"
                         size="small"
+                        type="password" 
                         fullWidth
                         InputLabelProps={{ style: { fontSize: '18px' } }}
                         style={{ marginTop: '10px' }}
@@ -74,9 +75,9 @@ const Login = () => {
                       <CButton type="submit" color="primary">Login</CButton>
                     </div>
                     <div className="mt-4 text-center">
-                      <a href="auth-recoverpw.html" className="text-muted">
+                      {/* <a href="auth-recoverpw.html" className="text-muted"> */}
                         {/* <i className="mdi mdi-lock me-1"></i> Forgot your password? */}
-                      </a>
+                      {/* </a> */}
                     </div>
                   </form>
                 </div>

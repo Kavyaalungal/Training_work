@@ -5,7 +5,7 @@ const PendingCollection = React.lazy(() => import('./views/theme/pendingcollecti
 const EditInvoice = React.lazy(() => import('./views/theme/editinvoice/EditInvoice'))
 
 // Base
-const Login = React.lazy(() => import('./views/base/login/Login'))
+const Patient = React.lazy(() => import('./views/base/patient/Patient'))
 const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
 const Cards = React.lazy(() => import('./views/base/cards/Cards'))
 const Carousels = React.lazy(() => import('./views/base/carousels/Carousels'))
@@ -58,7 +58,7 @@ const routes = [
   { path: '/pendingcollection', name: 'Pending Collection', element: PendingCollection },
   { path: '/editinvoice', name: 'Edit Invoice', element: EditInvoice },
   { path: '/base', name: 'Base', element: Cards, exact: true },
-  { path: '/base/login', name: 'Login', element: Login },
+  { path: '/base/patient', name: 'Patient Views', element: Patient },
   { path: '/base/breadcrumbs', name: 'Breadcrumbs', element: Breadcrumbs },
   { path: '/base/cards', name: 'Cards', element: Cards },
   { path: '/base/carousels', name: 'Carousel', element: Carousels },

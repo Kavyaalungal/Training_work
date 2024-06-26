@@ -63,6 +63,9 @@ const Dashboard = () => {
     { title: 'Bounce Rate', value: 'Average Rate', percent: 40.15, color: 'primary' },
   ]
 
+
+
+
   const progressGroupExample1 = [
     { title: 'Monday', value1: 34, value2: 78 },
     { title: 'Tuesday', value1: 56, value2: 94 },
@@ -72,6 +75,8 @@ const Dashboard = () => {
     { title: 'Saturday', value1: 53, value2: 82 },
     { title: 'Sunday', value1: 9, value2: 69 },
   ]
+  
+  
 
   const progressGroupExample2 = [
     { title: 'Male', icon: cilUser, value: 53 },
@@ -84,6 +89,7 @@ const Dashboard = () => {
     { title: 'Twitter', icon: cibTwitter, percent: 11, value: '37,564' },
     { title: 'LinkedIn', icon: cibLinkedin, percent: 8, value: '27,319' },
   ]
+  
 
   const tableExample = [
     {

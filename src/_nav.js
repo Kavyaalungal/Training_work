@@ -9,8 +9,10 @@ import {
   cilDrop,
   cilNotes,
   cilContact,
+  cilSettings,
   cilPencil,
   cilPuzzle,
+  cilGroup,
   cilSpreadsheet,
   cilSpeedometer,
   cilStar,
@@ -44,6 +46,32 @@ const _nav = [
     to: '/editinvoice',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
+{
+  component: CNavItem,
+  name: 'Patient Views',
+  to:'/base/patient',
+  icon: <CIcon icon={cilGroup} customClassName="nav-icon"/>,
+},
+//{
+ // component: CNavItem,
+ // name:'Settings',
+ // to:'/base/settings',
+//  icon: <CIcon icon={cilSettings} customClassName="nav-icon"/>
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // {
   //     component: CNavItem,
