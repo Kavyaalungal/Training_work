@@ -52,7 +52,7 @@ import avatar6 from 'src/assets/images/avatars/6.jpg'
 
 import WidgetsBrand from '../widgets/WidgetsBrand'
 import WidgetsDropdown from '../widgets/WidgetsDropdown'
-//import MainChart from './MainChart'
+import MainChart from './MainChart'
 
 const Dashboard = () => {
   const progressExample = [
@@ -89,7 +89,21 @@ const Dashboard = () => {
     { title: 'Twitter', icon: cibTwitter, percent: 11, value: '37,564' },
     { title: 'LinkedIn', icon: cibLinkedin, percent: 8, value: '27,319' },
   ]
-  
+  const table = [
+    {
+      avatar :{ src:avatar1, status: 'success'},
+      user:{
+        name:'Yiorgos Avraamu',
+        new:true,
+        registered:'Jan 1, 2023',
+      },
+      country:{name:'USA',flag: cifUs},
+      usage:{
+        value:50,
+        period:'Jun 11'
+      }
+    }
+  ]
 
   const tableExample = [
     {
