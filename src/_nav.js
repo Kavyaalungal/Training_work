@@ -48,8 +48,8 @@ const _nav = [
   },
 {
   component: CNavItem,
-  name: 'Patient Views',
-  to:'/base/patient',
+  name: 'Patient Registration',
+  to:'/patient',
   icon: <CIcon icon={cilGroup} customClassName="nav-icon"/>,
 },
 //{
