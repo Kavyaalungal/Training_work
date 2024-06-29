@@ -150,22 +150,8 @@
 //                     <strong>This is the second item&#39;s accordion body.</strong> It is hidden by
 //                     default, until the collapse plugin adds the appropriate classes that we use to
 //                     style each element. These classes control the overall appearance, as well as the
-//                     showing and hiding via CSS transitions. You can modify any of this with custom
-//                     CSS or overriding our default variables. It&#39;s also worth noting that just
-//                     about any HTML can go within the <code>.accordion-body</code>, though the
-//                     transition does limit overflow.
-//                   </CAccordionBody>
-//                 </CAccordionItem>
-//               </CAccordion>
-//             </DocsExample>
-//           </CCardBody>
-//         </CCard>
-//       </CCol>
-//     </CRow>
-//   )
-// }
+//                     showing and hiding via CSS transitions.
 
-// export default Accordion
 
 
 
@@ -602,6 +588,12 @@ const Patient = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [patientDetails, setPatientDetails] = useState(null);
 
+  const resetForm = () => {
+    setPatientDetails(null);
+    setSearchValue('');
+    setSuggestions([]);
+  };
+
   const handleSearchCriteriaChange = (event) => {
     setSearchCriteria(event.target.value);
     setSearchValue('');
@@ -680,14 +672,15 @@ const Patient = () => {
   };
 
   const renderOption = (props, option) => {
+    const { Patient_Name, Patient_Email, Patient_Phno, Patient_Code } = option;
     const highlight = searchValue.toLowerCase();
-
+  
     // Function to render highlighted text
     const renderHighlightedText = (text, isHighlighted) => {
       if (!isHighlighted) {
         return text;
       }
-
+  
       const parts = text.split(new RegExp(`(${highlight})`, 'gi'));
       return (
         <span>
@@ -703,21 +696,23 @@ const Patient = () => {
         </span>
       );
     };
+  
 
+   
     return (
-      <li {...props}>
+      <li key={option.Patient_Code} {...props}>
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-          <div>{renderHighlightedText(option.Patient_Name || '', searchCriteria === 'Name')}</div> {/* Render name with highlighting if searchCriteria is 'Name' */}
-          <div>{renderHighlightedText(option.Patient_Email || '', searchCriteria === 'Email')}</div> {/* Render email with highlighting if searchCriteria is 'Email' */}
+          <div>{renderHighlightedText(Patient_Name || '', searchCriteria === 'Name')}</div>
+          <div>{renderHighlightedText(Patient_Email || '', searchCriteria === 'Email')}</div>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <span>{renderHighlightedText(option.Patient_Phno || '', searchCriteria === 'Phone')}</span> {/* Render phone with highlighting if searchCriteria is 'Phone' */}
-            <span>{renderHighlightedText(option.Patient_Code || '', searchCriteria === 'Patient ID')}</span> {/* Render code with highlighting if searchCriteria is 'Patient ID' */}
+            <span>{renderHighlightedText(Patient_Phno || '', searchCriteria === 'Phone')}</span>
+            <span>{renderHighlightedText(Patient_Code || '', searchCriteria === 'Patient ID')}</span>
           </div>
         </div>
       </li>
     );
   };
-
+  
   return (
     <>
       <CCard className="mb-4">
@@ -739,12 +734,15 @@ const Patient = () => {
                 </FormControl>
               </Grid>
               <Grid item xs={12} sm={8}>
+            
+
                 <Autocomplete
                   freeSolo
                   options={suggestions}
                   getOptionLabel={(option) => `${option.Patient_Name || ''}, ${option.Patient_Email || ''}, ${option.Patient_Phno || ''}, ${option.Patient_Code || ''}`}
                   onInputChange={handleSearchValueChange}
                   onChange={handleSelectPatient}
+                  onClose={resetForm}
                   renderOption={renderOption}
                   renderInput={(params) => (
                     <TextField {...params} label={searchCriteria} variant="outlined" size="small" fullWidth />
