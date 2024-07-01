@@ -662,6 +662,26 @@ const Patient = () => {
         console.log('Patient Details:', patientDetailsWithNormalizedTitle); // Log patient details received
         setPatientDetails(patientDetailsWithNormalizedTitle); // Update patient details with full details
         console.log('Updated Patient Details State:', patientDetailsWithNormalizedTitle); // Log updated state
+
+        // Update searchValue to show the selected search item value in the TextField
+        let selectedValue;
+        switch (searchCriteria) {
+          case 'Patient ID':
+            selectedValue = newValue.Patient_Code;
+            break;
+          case 'Name':
+            selectedValue = newValue.Patient_Name;
+            break;
+          case 'Email':
+            selectedValue = newValue.Patient_Email;
+            break;
+          case 'Phone':
+            selectedValue = newValue.Patient_Phno;
+            break;
+          default:
+            selectedValue = '';
+        }
+        setSearchValue(selectedValue);
       } else {
         toast.error('Patient details not found');
       }
@@ -674,13 +694,13 @@ const Patient = () => {
   const renderOption = (props, option) => {
     const { Patient_Name, Patient_Email, Patient_Phno, Patient_Code } = option;
     const highlight = searchValue.toLowerCase();
-  
+
     // Function to render highlighted text
     const renderHighlightedText = (text, isHighlighted) => {
       if (!isHighlighted) {
         return text;
       }
-  
+
       const parts = text.split(new RegExp(`(${highlight})`, 'gi'));
       return (
         <span>
@@ -696,9 +716,7 @@ const Patient = () => {
         </span>
       );
     };
-  
 
-   
     return (
       <li key={option.Patient_Code} {...props}>
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
@@ -712,7 +730,7 @@ const Patient = () => {
       </li>
     );
   };
-  
+
   return (
     <>
       <CCard className="mb-4">
@@ -734,8 +752,6 @@ const Patient = () => {
                 </FormControl>
               </Grid>
               <Grid item xs={12} sm={8}>
-            
-
                 <Autocomplete
                   freeSolo
                   options={suggestions}
@@ -747,6 +763,7 @@ const Patient = () => {
                   renderInput={(params) => (
                     <TextField {...params} label={searchCriteria} variant="outlined" size="small" fullWidth />
                   )}
+                  inputValue={searchValue}
                 />
               </Grid>
             </Grid>
