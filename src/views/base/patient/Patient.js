@@ -274,7 +274,7 @@
         return (
           <li key={option.Patient_Code} {...props}>
             <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-             <table>
+             {/* <table>
                <tr>
                  <td>{renderHighlightedText(Patient_Name || '',searchCriteria === 'Name')}</td>
                </tr>
@@ -285,14 +285,13 @@
                  <td>{renderHighlightedText(Patient_Phno || '', searchCriteria === 'Phone')}</td>
                  <td>{renderHighlightedText(Patient_Code || '', searchCriteria === 'Patient ID')}</td>
                </tr>
-
-             </table>
-              {/* <div>{renderHighlightedText(Patient_Name || '', searchCriteria === 'Name')}</div>
-              <div>{renderHighlightedText(Patient_Email || '', searchCriteria === 'Email')}</div> */}
-              {/* <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+               </table> */}
+              <div>{renderHighlightedText(Patient_Name || '', searchCriteria === 'Name')}</div>
+              <div>{renderHighlightedText(Patient_Email || '', searchCriteria === 'Email')}</div>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>{renderHighlightedText(Patient_Phno || '', searchCriteria === 'Phone')}</span>
                 <span>{renderHighlightedText(Patient_Code || '', searchCriteria === 'Patient ID')}</span>
-             </div> */}
+             </div> 
             </div>
           </li>
       );
