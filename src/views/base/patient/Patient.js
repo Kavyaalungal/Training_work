@@ -213,6 +213,10 @@
      Patient_Title: newTitle,
       Patient_Ismale: gender,
     }));
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      Patient_Ismale: '',
+    }));
   };
 
 
@@ -538,7 +542,7 @@
                      InputLabelProps={{ style: { fontSize: '14px' } }}
                      disabled={!isEditMode} 
                       error={!!errors.Patient_Phno}
-                      // helperText={errors.Patient_Phno}
+                       helperText={errors.Patient_Phno}
                     />
                  </Grid>
                   <Grid item xs={12} sm={4}>
@@ -556,7 +560,7 @@
                       InputLabelProps={{ style: { fontSize: '14px' } }}
                       disabled={!isEditMode} 
                       error={!!errors.Patient_mobile}
-                      // helperText={errors.Patient_mobile}
+                       helperText={errors.Patient_mobile}
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -574,8 +578,7 @@
                       InputLabelProps={{ style: { fontSize: '14px' } }}
                       disabled={!isEditMode} 
                       error={!!errors.Patient_Email}
-                  
-                      // helperText={errors.Patient_Email}
+                      helperText={errors.Patient_Email}
                     />
                   </Grid>
                  <Grid item xs={12}>
@@ -636,6 +639,7 @@
   </Grid>
 
              </Container>
+             {/* <ToastContainer/> */}
               <ToastContainer position="top-center" autoClose={3000} hideProgressBar />
             </div>
           </CCard>
