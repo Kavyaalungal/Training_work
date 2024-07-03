@@ -28,7 +28,7 @@
 
       const handleSearchCriteriaChange = (event) => {
         setSearchCriteria(event.target.value);
-        console.log('Search criteria changed:', newCriteria)
+        // console.log('Search criteria changed:', newCriteria)
        setSearchValue('');
         setSuggestions([]);
       };
@@ -46,7 +46,8 @@
             YearId: 2425,
             BranchId: 2,
             SrchItem: searchCriteria,
-            SrchVal: value
+            srchVal:value
+            // SrchVal: value.toLowerCase(),
           });
 
           if (response.data && response.data.patientList) {
@@ -91,10 +92,11 @@
             const patientDetailsWithNormalizedTitle = {
               ...response.data.patDetails,
             Patient_Title: normalizeTitle(response.data.patDetails.Patient_Title),
+            // Patient_Name: response.data.patDetails.Patient_Name.charAt(0).toUpperCase() + response.data.patDetails.Patient_Name.slice(1),
             
            };
           
-
+           patientDetailsWithNormalizedTitle.originalName = response.data.patDetails.Patient_Name;
            console.log('Patient Details:', patientDetailsWithNormalizedTitle); // Log patient details received
             setPatientDetails(patientDetailsWithNormalizedTitle); // Update patient details with full details
             console.log('Updated Patient Details State:', patientDetailsWithNormalizedTitle);
@@ -228,8 +230,10 @@
     }
     try {
       const editFlag = isEditMode ? 1 : 0;
+      console.log('Edit Flag:', editFlag);
       const response = await axios.post('http://172.16.16.10:8082/api/PatientSaveUpdate', {
         ...patientDetails,
+        // Patient_Name: patientDetails.Patient_Name.toLowerCase(),
         Patient_CpyId: 2,
         Patient_YrId: 2425,
         EditFlag: editFlag,
@@ -397,7 +401,7 @@
                         id="name"
                         label="Name"
                         variant="outlined"                       
-                        value={patientDetails.Patient_Name}
+                        value={patientDetails.Patient_Name || ''}
                         onChange={(e) => {
                          setPatientDetails({ ...patientDetails, Patient_Name: e.target.value });
                          setErrors((prevErrors) => ({ ...prevErrors, Patient_Name: '' }));
